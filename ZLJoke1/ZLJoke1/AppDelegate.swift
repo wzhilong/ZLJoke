@@ -16,15 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
-        let win  = UIWindow.init(frame: UIScreen.mainScreen().nativeBounds)
-        
         let vc = IndexVC()
-        win.rootViewController = vc
-        
-        
-        window = win
-        window?.makeKeyAndVisible()
+        vc.title = "启动"
+        self.window!.rootViewController = vc
         
         return true
     }

@@ -15,25 +15,34 @@ class IndexVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBarVC = addVC()
-        
-        self .presentViewController(tabBarVC!, animated: true) {
-            
+        self.tabBarVC = self.createVC()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self .presentViewController(self.tabBarVC!, animated: true) {
+            NSLog("xxxx" )
         }
-        
-        
-        
     }
     /**
      添加视图
      */
-    func addVC() -> UITabBarController {
-        tabBarVC = UITabBarController.init()
+    func createVC() -> UITabBarController {
+        
+        
+        
         let mainVC = JokeMainVC()
         mainVC.title = "首页"
-        mainVC.tabBarItem = UITabBarItem.init(title: "", image: UIImage.init(named: ""), selectedImage: UIImage.init(named: ""))
+        mainVC.tabBarItem = UITabBarItem.init(title: "首页", image: UIImage.init(named: "sk2"), selectedImage: UIImage.init(named: "sk1"))
         
-        tabBarVC!.addChildViewController(mainVC)
+        let myVC = JokeMyVC()
+        myVC.title = "my"
+        myVC.tabBarItem = UITabBarItem.init(title: "我", image: UIImage.init(named: "sk1"), selectedImage: UIImage.init(named: "sk2"))
+        
+        
+        self.tabBarVC = UITabBarController()
+        self.tabBarVC?.view.backgroundColor = UIColor.whiteColor()
+        self.tabBarVC!.viewControllers = [mainVC,myVC]
+        
         
         return tabBarVC!
     }
@@ -42,5 +51,4 @@ class IndexVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
 }
