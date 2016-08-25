@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ZLJoke
+//  ZLJoke1
 //
-//  Created by 10fenkeMacTwo on 16/8/17.
+//  Created by 10fenkeMacTwo on 16/8/25.
 //  Copyright © 2016年 ZhiLong. All rights reserved.
 //
 
@@ -15,19 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        let window  = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-        let vc = IndexVC()
-        window.rootViewController = vc
-        
-        
-        self.window = window
-        self.window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
