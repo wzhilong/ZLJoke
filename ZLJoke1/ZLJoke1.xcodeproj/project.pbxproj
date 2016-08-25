@@ -14,6 +14,9 @@
 		0C9F9C371D6EC56F00956C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C351D6EC56F00956C61 /* LaunchScreen.storyboard */; };
 		0C9F9C421D6EC56F00956C61 /* ZLJoke1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F9C411D6EC56F00956C61 /* ZLJoke1Tests.swift */; };
 		0C9F9C4D1D6EC56F00956C61 /* ZLJoke1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F9C4C1D6EC56F00956C61 /* ZLJoke1UITests.swift */; };
+		0C9F9C611D6EC5A800956C61 /* IndexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F9C5C1D6EC5A800956C61 /* IndexVC.swift */; };
+		0C9F9C621D6EC5A800956C61 /* IndexVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C5D1D6EC5A800956C61 /* IndexVC.xib */; };
+		0C9F9C631D6EC5A800956C61 /* Globle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F9C5E1D6EC5A800956C61 /* Globle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		0C9F9C481D6EC56F00956C61 /* ZLJoke1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZLJoke1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9F9C4C1D6EC56F00956C61 /* ZLJoke1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLJoke1UITests.swift; sourceTree = "<group>"; };
 		0C9F9C4E1D6EC56F00956C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9F9C5C1D6EC5A800956C61 /* IndexVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexVC.swift; sourceTree = "<group>"; };
+		0C9F9C5D1D6EC5A800956C61 /* IndexVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexVC.xib; sourceTree = "<group>"; };
+		0C9F9C5E1D6EC5A800956C61 /* Globle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		0C9F9C2B1D6EC56F00956C61 /* ZLJoke1 */ = {
 			isa = PBXGroup;
 			children = (
+				0C9F9C5A1D6EC5A800956C61 /* App */,
 				0C9F9C2C1D6EC56F00956C61 /* AppDelegate.swift */,
 				0C9F9C2E1D6EC56F00956C61 /* ViewController.swift */,
 				0C9F9C301D6EC56F00956C61 /* Main.storyboard */,
@@ -123,6 +130,40 @@
 				0C9F9C4E1D6EC56F00956C61 /* Info.plist */,
 			);
 			path = ZLJoke1UITests;
+			sourceTree = "<group>";
+		};
+		0C9F9C5A1D6EC5A800956C61 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0C9F9C5B1D6EC5A800956C61 /* Controller */,
+				0C9F9C5E1D6EC5A800956C61 /* Globle.swift */,
+				0C9F9C5F1D6EC5A800956C61 /* Model */,
+				0C9F9C601D6EC5A800956C61 /* View */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0C9F9C5B1D6EC5A800956C61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C9F9C5C1D6EC5A800956C61 /* IndexVC.swift */,
+				0C9F9C5D1D6EC5A800956C61 /* IndexVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0C9F9C5F1D6EC5A800956C61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C9F9C601D6EC5A800956C61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9F9C371D6EC56F00956C61 /* LaunchScreen.storyboard in Resources */,
+				0C9F9C621D6EC5A800956C61 /* IndexVC.xib in Resources */,
 				0C9F9C341D6EC56F00956C61 /* Assets.xcassets in Resources */,
 				0C9F9C321D6EC56F00956C61 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9F9C631D6EC5A800956C61 /* Globle.swift in Sources */,
+				0C9F9C611D6EC5A800956C61 /* IndexVC.swift in Sources */,
 				0C9F9C2F1D6EC56F00956C61 /* ViewController.swift in Sources */,
 				0C9F9C2D1D6EC56F00956C61 /* AppDelegate.swift in Sources */,
 			);
@@ -400,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZLJoke1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.10fenke.ZLJoke1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZLJoke1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.10fenke.ZLJoke1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
