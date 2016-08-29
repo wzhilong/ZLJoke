@@ -26,6 +26,8 @@
 		0C9F9C6E1D6EDE5F00956C61 /* JokeMyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F9C6C1D6EDE5F00956C61 /* JokeMyVC.swift */; };
 		0C9F9C6F1D6EDE5F00956C61 /* JokeMyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C6D1D6EDE5F00956C61 /* JokeMyVC.xib */; };
 		0CD6B7291D73DB1900ED18ED /* JKContentScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */; };
+		0CD6B72C1D73F90700ED18ED /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B72B1D73F90700ED18ED /* JokeModel.swift */; };
+		0CD6B72E1D74057E00ED18ED /* HttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B72D1D74057E00ED18ED /* HttpTool.swift */; };
 		885DA86C0F78A7383779A4E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DA00F21F93B391B0206A96 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -48,7 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0C548DEF1D70369C006C3B49 /* JKScrollTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKScrollTitle.swift; sourceTree = "<group>"; };
-		0C548DF11D704133006C3B49 /* JokeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeTableView.swift; sourceTree = "<group>"; };
+		0C548DF11D704133006C3B49 /* JokeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeTableView.swift; path = ../JokeTableView.swift; sourceTree = "<group>"; };
 		0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKTableDelegate.swift; sourceTree = "<group>"; };
 		0C548DF91D704471006C3B49 /* JokeTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeTextCell.swift; sourceTree = "<group>"; };
 		0C548DFA1D704471006C3B49 /* JokeTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeTextCell.xib; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		0C9F9C6C1D6EDE5F00956C61 /* JokeMyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeMyVC.swift; sourceTree = "<group>"; };
 		0C9F9C6D1D6EDE5F00956C61 /* JokeMyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeMyVC.xib; sourceTree = "<group>"; };
 		0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKContentScroll.swift; sourceTree = "<group>"; };
+		0CD6B72B1D73F90700ED18ED /* JokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		0CD6B72D1D74057E00ED18ED /* HttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpTool.swift; sourceTree = "<group>"; };
 		31DA00F21F93B391B0206A96 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F8AE7832074896A21AF6E1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A9A04F4037418FEDC946A611 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		0C548DEE1D70368F006C3B49 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C548DF11D704133006C3B49 /* JokeTableView.swift */,
 				0C548DEF1D70369C006C3B49 /* JKScrollTitle.swift */,
 				0C548DF91D704471006C3B49 /* JokeTextCell.swift */,
 				0C548DFA1D704471006C3B49 /* JokeTextCell.xib */,
@@ -172,6 +177,7 @@
 			children = (
 				0C9F9C5B1D6EC5A800956C61 /* Controller */,
 				0C9F9C5E1D6EC5A800956C61 /* Globle.swift */,
+				0CD6B72D1D74057E00ED18ED /* HttpTool.swift */,
 				0C9F9C5F1D6EC5A800956C61 /* Model */,
 				0C9F9C601D6EC5A800956C61 /* View */,
 			);
@@ -207,11 +213,11 @@
 		0C9F9C641D6ED42000956C61 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				0CD6B72A1D73F8DE00ED18ED /* Model */,
 				0C548DEE1D70368F006C3B49 /* View */,
 				0C9F9C701D6EEC0C00956C61 /* Delegate */,
 				0C9F9C671D6ED45700956C61 /* JokeMainVC.swift */,
 				0C9F9C681D6ED45700956C61 /* JokeMainVC.xib */,
-				0C548DF11D704133006C3B49 /* JokeTableView.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -238,6 +244,14 @@
 				0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		0CD6B72A1D73F8DE00ED18ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CD6B72B1D73F90700ED18ED /* JokeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B227320316F907C4E45E67B7 /* Frameworks */ = {
@@ -446,6 +460,8 @@
 				0C548DF41D7041EE006C3B49 /* JKTableDelegate.swift in Sources */,
 				0C9F9C6E1D6EDE5F00956C61 /* JokeMyVC.swift in Sources */,
 				0C548DF01D70369C006C3B49 /* JKScrollTitle.swift in Sources */,
+				0CD6B72E1D74057E00ED18ED /* HttpTool.swift in Sources */,
+				0CD6B72C1D73F90700ED18ED /* JokeModel.swift in Sources */,
 				0CD6B7291D73DB1900ED18ED /* JKContentScroll.swift in Sources */,
 				0C548DF21D704133006C3B49 /* JokeTableView.swift in Sources */,
 				0C9F9C631D6EC5A800956C61 /* Globle.swift in Sources */,

@@ -80,6 +80,12 @@ class JKScrollTitle: UIScrollView {
             self.selectTitleFunc!(num: sender.tag - tagIndex,title: (sender.titleLabel?.text)!);
         }
     }
+    func  titleClickAtIndex(index:Int) -> Void
+    {
+        let  view = self.viewWithTag(index+tagIndex)
+        let but = view as! UIButton
+        self .titleButtonClick(but)
+    }
     
     /**
      点击标题后的界面变换 被点击的转移到中间

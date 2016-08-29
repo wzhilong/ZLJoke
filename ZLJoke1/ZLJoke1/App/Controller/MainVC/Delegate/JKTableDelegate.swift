@@ -27,6 +27,9 @@ class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cel = tableView.dequeueReusableCellWithIdentifier("JokeTextCell")
         let cell = cel as!JokeTextCell
+        if dataArray != nil && dataArray!.count > indexPath.row {
+            cell.jokeModel = dataArray![indexPath.row] as! JokeModel
+        }
         
         
         return cell
@@ -35,6 +38,9 @@ class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
         
         let cel = tableView.dequeueReusableCellWithIdentifier("JokeTextCell")
         let cell = cel as!JokeTextCell
+        if dataArray != nil && dataArray!.count > indexPath.row {
+            cell.jokeModel = dataArray![indexPath.row] as! JokeModel
+        }
         return cell .cellHeight()
     }
 

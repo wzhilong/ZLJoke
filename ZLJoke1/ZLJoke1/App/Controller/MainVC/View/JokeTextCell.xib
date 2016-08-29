@@ -14,9 +14,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="397" height="208"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oH-cH-QaI">
-                        <rect key="frame" x="10" y="10" width="377" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oH-cH-QaI">
+                        <rect key="frame" x="10" y="4" width="377" height="17"/>
+                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -27,19 +27,29 @@
                             <constraint firstAttribute="height" constant="30" id="bdd-Pf-zK7"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFz-Gz-UY5">
+                        <rect key="frame" x="10" y="25" width="377" height="149"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="377" id="XY9-Kx-HBF"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3oH-cH-QaI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0F0-yF-8i7"/>
+                    <constraint firstItem="3oH-cH-QaI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="0F0-yF-8i7"/>
                     <constraint firstAttribute="bottom" secondItem="gbh-9I-JHx" secondAttribute="bottom" id="5TS-18-n6x"/>
                     <constraint firstAttribute="trailing" secondItem="3oH-cH-QaI" secondAttribute="trailing" constant="10" id="EZm-wo-pUg"/>
-                    <constraint firstItem="gbh-9I-JHx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3oH-cH-QaI" secondAttribute="bottom" id="QDz-8v-R2C"/>
                     <constraint firstItem="gbh-9I-JHx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ak6-dY-IQN"/>
+                    <constraint firstItem="PFz-Gz-UY5" firstAttribute="leading" secondItem="3oH-cH-QaI" secondAttribute="leading" id="dJQ-Ij-QCO"/>
+                    <constraint firstItem="PFz-Gz-UY5" firstAttribute="top" secondItem="3oH-cH-QaI" secondAttribute="bottom" constant="4" id="iC8-Yd-ghd"/>
                     <constraint firstItem="3oH-cH-QaI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qJF-29-l0X"/>
                     <constraint firstAttribute="trailing" secondItem="gbh-9I-JHx" secondAttribute="trailing" id="s3q-Ir-CKd"/>
+                    <constraint firstItem="gbh-9I-JHx" firstAttribute="top" secondItem="PFz-Gz-UY5" secondAttribute="bottom" constant="4" id="xOl-sA-ezc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="contentLabel" destination="3oH-cH-QaI" id="hjf-0W-tGQ"/>
+                <outlet property="imgV" destination="PFz-Gz-UY5" id="G2h-0e-mZv"/>
+                <outlet property="imgWidthConst" destination="XY9-Kx-HBF" id="Moy-zd-Qwu"/>
             </connections>
             <point key="canvasLocation" x="336.5" y="360.5"/>
         </tableViewCell>

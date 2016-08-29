@@ -20,7 +20,6 @@ class IndexVC: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         self .presentViewController(self.tabBarVC!, animated: true) {
-            NSLog("xxxx" )
         }
     }
     /**

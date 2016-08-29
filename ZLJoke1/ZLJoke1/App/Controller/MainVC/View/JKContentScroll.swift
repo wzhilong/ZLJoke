@@ -8,7 +8,8 @@
 
 import UIKit
 
-class JKContentScroll: UIScrollView {
+class JKContentScroll: UIScrollView ,UIScrollViewDelegate
+{
 
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -18,12 +19,53 @@ class JKContentScroll: UIScrollView {
     }
     */
     
+     internal  var endDecelerating:((Int)->Void)?
+    
+    override init(frame: CGRect)
+    {
+        super.init(frame: frame)
+        self.pagingEnabled = true
+        self.delegate = self
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    internal var width:CGFloat
+    {
+        get{
+            return self.frame.size.width
+        }
+    }
+    internal var height:CGFloat{
+        get{
+            return self.frame.size.height
+        }
+    }
+    
+    
     internal var tableArray:[JokeTableView] = Array()
     func addJokeTableSubleView(table:JokeTableView) -> Void
     {
-        table.frame = CGRectMake(self.frame.size.width * (CGFloat)(tableArray.count), 0, self.frame.size.width, self.contentSize.height)
+        table.frame = CGRectMake(width * (CGFloat)(tableArray.count), 0, width, self.frame.size.height)
         self .addSubview(table)
-        self.contentSize = CGSizeMake(self.frame.size.width * (CGFloat)(tableArray.count), self.contentSize.height)
+        tableArray .append(table)
+        self.contentSize = CGSizeMake(width * (CGFloat)(tableArray.count), height)
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let x = (Int)(scrollView.contentOffset.x)/(Int)(scrollView.frame.size.width)
+        NSLog("%d", x)
+        if (endDecelerating != nil)
+        {
+            endDecelerating!(x)
+        }
+    }
+    func scrollToIndex(index:Int) -> Void {
+        self .scrollRectToVisible(CGRectMake(width * (CGFloat)(index), 0, width, height), animated: true)
     }
     
 }

@@ -7,11 +7,40 @@
 //
 
 import UIKit
-
+import Kingfisher
 class JokeTextCell: UITableViewCell {
 
+    @IBOutlet weak var imgWidthConst: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var imgV: UIImageView!
     
+    internal var imgHeight:CGFloat = 0
+    internal var model:JokeModel = JokeModel()
+    internal var jokeModel:JokeModel
+    {
+        get{
+            return model
+        }
+        set{
+            model = newValue
+            self.updateCell()
+        }
+    }
+    
+    func updateCell () -> Void {
+        contentLabel.text = model.title
+        if model.pic != nil {
+            imgV.kf_setImageWithURL(NSURL.init(string: model.pic!))
+        }
+        imgHeight = (CGFloat)(model.pic_h)
+        imgWidthConst.constant = (CGFloat)(model.pic_w)
+        
+        
+        if (CGFloat)(model.pic_w) > (Globle.screenWidth - 20 ){
+            imgHeight = ( Globle.screenWidth - 20)/(imgWidthConst.constant) * imgHeight
+            imgWidthConst.constant = Globle.screenWidth - 20
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,22 +51,25 @@ class JokeTextCell: UITableViewCell {
         
     }
     
+    
     func cellHeight() -> CGFloat
     {
         var height:CGFloat = 0
         let style = NSMutableParagraphStyle.init()
         
         style.lineBreakMode = .ByCharWrapping
-        let dic:NSDictionary = NSDictionary.init(objects: ["NSFontAttributeName","NSParagraphStyleAttributeName"], forKeys: [self.contentLabel.font,style])
+        var dic = Dictionary<String,AnyObject>()
+        dic[NSFontAttributeName] = self.contentLabel.font
+        dic[NSParagraphStyleAttributeName] = style
         let text = NSString(CString: self.contentLabel!.text!.cStringUsingEncoding(NSUTF8StringEncoding)!,
                             encoding: NSUTF8StringEncoding)
-        let rect = text?.boundingRectWithSize(CGSizeMake(self.frame.size.width - 20, 1000), options: .UsesLineFragmentOrigin, attributes: dic as? [String : AnyObject], context: nil)
+        let rect = text?.boundingRectWithSize(CGSizeMake(Globle.screenWidth - 30, 1000), options: .UsesLineFragmentOrigin, attributes: dic, context: nil)
         
         if rect != nil {
-            height = rect!.height + 40
+            height = rect!.height + imgHeight  + 48
         }else
         {
-            height = 40
+            height = 48
         }
         
         return height
