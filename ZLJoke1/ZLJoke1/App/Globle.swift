@@ -10,6 +10,10 @@ import UIKit
 
 
 class Globle: NSObject {
+    static let screenWidth  = UIScreen.mainScreen().bounds.width
+    static let screenHeight = UIScreen.mainScreen().bounds.height
+
+    
     
     
     

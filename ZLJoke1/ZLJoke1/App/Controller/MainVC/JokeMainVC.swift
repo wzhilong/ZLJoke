@@ -7,29 +7,47 @@
 //
 
 import UIKit
-
-class JokeMainVC: UIViewController {
+import SnapKit
+class JokeMainVC: UIViewController ,UIScrollViewDelegate
+{
     @IBOutlet weak var topScrollV: JKScrollTitle!
-    @IBOutlet weak var contentScrollV: UIScrollView!
+    @IBOutlet weak var contentScrollV: JKContentScroll!
     
     
-    internal var topDel :JKMainTopScrDelegate?
-    internal var contDel:JKMainConScrDelegate?
+    internal var tableViewArray:[UITableView]!
+    
+    
+    internal var tuiJianTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
+    
+    internal var imgTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
+    
+    internal var textTV = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
+    internal var vedioTV = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
-        
     }
     
-    override func viewDidAppear(animated: Bool) {
-    topScrollV.addTitleArray(["1","2","3","3","2","3","3","2","3","3"]) { (num, title) in
+    
+    override func viewWillAppear(animated: Bool)
+    {
+    topScrollV.addTitleArray(["推荐","2","3","3","2","3","3","2","3","3"]) { (num, title) in
             NSLog("num:%d , title:%s", num,title)
         }
+        contentScrollV.addSubview(tuiJianTV)
+        contentScrollV.addSubview(imgTV)
+        contentScrollV.addSubview(textTV)
+        contentScrollV.addSubview(vedioTV)
     }
+    func config() -> Void {
+        contentScrollV.pagingEnabled = true
+        contentScrollV.delegate = self
+    }
+    
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
     }
 

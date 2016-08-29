@@ -29,20 +29,17 @@ class IndexVC: UIViewController {
     func createVC() -> UITabBarController {
         
         
-        
         let mainVC = JokeMainVC()
         mainVC.title = "首页"
-        mainVC.tabBarItem = UITabBarItem.init(title: "首页", image: UIImage.init(named: "sk2"), selectedImage: UIImage.init(named: "sk1"))
+        mainVC.tabBarItem = UITabBarItem.init(title: "首页", image: UIImage.init(named: "tab_live"), selectedImage: UIImage.init(named: "tab_live_p"))
         
         let myVC = JokeMyVC()
         myVC.title = "my"
-        myVC.tabBarItem = UITabBarItem.init(title: "我", image: UIImage.init(named: "sk1"), selectedImage: UIImage.init(named: "sk2"))
-        
+        myVC.tabBarItem = UITabBarItem.init(title: "我", image: UIImage.init(named: "tab_live_p"), selectedImage: UIImage.init(named: "tab_live"))
         
         self.tabBarVC = UITabBarController()
         self.tabBarVC?.view.backgroundColor = UIColor.whiteColor()
         self.tabBarVC!.viewControllers = [mainVC,myVC]
-        
         
         return tabBarVC!
     }
