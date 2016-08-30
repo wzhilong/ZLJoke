@@ -18,9 +18,10 @@ class IndexVC: UIViewController {
         self.tabBarVC = self.createVC()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        self .presentViewController(self.tabBarVC!, animated: true) {
-        }
+    override func viewDidAppear(animated: Bool)
+    {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController!.pushViewController(JokeMainVC(), animated: false)
     }
     /**
      添加视图

@@ -25,6 +25,8 @@
 		0C9F9C6A1D6ED45700956C61 /* JokeMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C681D6ED45700956C61 /* JokeMainVC.xib */; };
 		0C9F9C6E1D6EDE5F00956C61 /* JokeMyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F9C6C1D6EDE5F00956C61 /* JokeMyVC.swift */; };
 		0C9F9C6F1D6EDE5F00956C61 /* JokeMyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C6D1D6EDE5F00956C61 /* JokeMyVC.xib */; };
+		0CB175A31D7533D600BF1D97 /* JKDataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB175A21D7533D600BF1D97 /* JKDataLoad.swift */; };
+		0CB175A51D7537A800BF1D97 /* WebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB175A41D7537A800BF1D97 /* WebModel.swift */; };
 		0CD6B7291D73DB1900ED18ED /* JKContentScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */; };
 		0CD6B72C1D73F90700ED18ED /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B72B1D73F90700ED18ED /* JokeModel.swift */; };
 		0CD6B72E1D74057E00ED18ED /* HttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B72D1D74057E00ED18ED /* HttpTool.swift */; };
@@ -73,9 +75,12 @@
 		0C9F9C681D6ED45700956C61 /* JokeMainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeMainVC.xib; sourceTree = "<group>"; };
 		0C9F9C6C1D6EDE5F00956C61 /* JokeMyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeMyVC.swift; sourceTree = "<group>"; };
 		0C9F9C6D1D6EDE5F00956C61 /* JokeMyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeMyVC.xib; sourceTree = "<group>"; };
+		0CB175A21D7533D600BF1D97 /* JKDataLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKDataLoad.swift; sourceTree = "<group>"; };
+		0CB175A41D7537A800BF1D97 /* WebModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebModel.swift; sourceTree = "<group>"; };
 		0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKContentScroll.swift; sourceTree = "<group>"; };
 		0CD6B72B1D73F90700ED18ED /* JokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		0CD6B72D1D74057E00ED18ED /* HttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpTool.swift; sourceTree = "<group>"; };
+		0CD6B7311D742D5B00ED18ED /* ZLJoke-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZLJoke-Bridging.h"; sourceTree = "<group>"; };
 		31DA00F21F93B391B0206A96 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F8AE7832074896A21AF6E1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A9A04F4037418FEDC946A611 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +155,7 @@
 				0C9F9C331D6EC56F00956C61 /* Assets.xcassets */,
 				0C9F9C351D6EC56F00956C61 /* LaunchScreen.storyboard */,
 				0C9F9C381D6EC56F00956C61 /* Info.plist */,
+				0CD6B7311D742D5B00ED18ED /* ZLJoke-Bridging.h */,
 			);
 			path = ZLJoke1;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				0CD6B72B1D73F90700ED18ED /* JokeModel.swift */,
+				0CB175A21D7533D600BF1D97 /* JKDataLoad.swift */,
+				0CB175A41D7537A800BF1D97 /* WebModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,9 +467,11 @@
 			files = (
 				0C548DF41D7041EE006C3B49 /* JKTableDelegate.swift in Sources */,
 				0C9F9C6E1D6EDE5F00956C61 /* JokeMyVC.swift in Sources */,
+				0CB175A51D7537A800BF1D97 /* WebModel.swift in Sources */,
 				0C548DF01D70369C006C3B49 /* JKScrollTitle.swift in Sources */,
 				0CD6B72E1D74057E00ED18ED /* HttpTool.swift in Sources */,
 				0CD6B72C1D73F90700ED18ED /* JokeModel.swift in Sources */,
+				0CB175A31D7533D600BF1D97 /* JKDataLoad.swift in Sources */,
 				0CD6B7291D73DB1900ED18ED /* JKContentScroll.swift in Sources */,
 				0C548DF21D704133006C3B49 /* JokeTableView.swift in Sources */,
 				0C9F9C631D6EC5A800956C61 /* Globle.swift in Sources */,
@@ -564,7 +574,9 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZLJoke1/ZLJoke-Bridging.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "recursive\\ $(PODS_ROOT)";
 			};
 			name = Debug;
 		};
@@ -602,6 +614,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZLJoke1/ZLJoke-Bridging.h";
+				USER_HEADER_SEARCH_PATHS = "recursive\\ $(PODS_ROOT)";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -616,6 +630,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.10fenke.ZLJoke1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -629,6 +644,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.10fenke.ZLJoke1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

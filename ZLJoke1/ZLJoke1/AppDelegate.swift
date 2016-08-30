@@ -9,18 +9,43 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , PKRevealing{
 
     var window: UIWindow?
 
-
+    internal var  revealController :PKRevealController!
+    internal var leftVC :UIViewController!
+    internal var rightVC :UIViewController!
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let vc = IndexVC()
         vc.title = "启动"
-        self.window!.rootViewController = vc
+        let nav = UINavigationController.init(rootViewController: vc)
+        
+        
+        leftVC = UIViewController.init()
+        leftVC.view.backgroundColor = UIColor.redColor()
+        rightVC = UIViewController.init()
+        rightVC.view.backgroundColor = UIColor.blueColor()
+        
+        revealController = PKRevealController.init(frontViewController: nav, leftViewController: leftVC, rightViewController: rightVC)
+        
+        self.window!.rootViewController = revealController
+        self.revealController.delegate = self
+        self.revealController.animationDuration = 0.5
         
         return true
+    }
+    
+    func startPresentVC() -> Void {
+        if !self.revealController.isPresentationModeActive
+        {
+            self.revealController .showViewController(rightVC)
+        }else
+        {
+            self.revealController.resignPresentationModeEntirely(false, animated: true, completion: nil)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

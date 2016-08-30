@@ -21,14 +21,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbh-9I-JHx">
-                        <rect key="frame" x="0.0" y="178" width="397" height="30"/>
+                        <rect key="frame" x="0.0" y="188" width="397" height="20"/>
                         <color key="backgroundColor" red="0.89938077059659094" green="0.89938077059659094" blue="0.89938077059659094" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="bdd-Pf-zK7"/>
+                            <constraint firstAttribute="height" constant="20" id="bdd-Pf-zK7"/>
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFz-Gz-UY5">
-                        <rect key="frame" x="10" y="25" width="377" height="149"/>
+                        <rect key="frame" x="10" y="25" width="377" height="159"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="377" id="XY9-Kx-HBF"/>
                         </constraints>

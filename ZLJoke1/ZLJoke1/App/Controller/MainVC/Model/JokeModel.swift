@@ -16,6 +16,8 @@ class JokeModel: NSObject {
     internal var pic_w:Float = 0
     internal var pic_h:Float = 0
     
+    internal var mp4_url:String?
+    internal var web_url:String?
     
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         if key == "id" {

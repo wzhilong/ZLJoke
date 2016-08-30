@@ -28,6 +28,7 @@ class JKContentScroll: UIScrollView ,UIScrollViewDelegate
         self.delegate = self
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
+        self.bounces = false
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -14,6 +14,8 @@ class JokeTextCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var imgV: UIImageView!
     
+    
+    internal var imgClick:((jokeModel:JokeModel)->Void)?
     internal var imgHeight:CGFloat = 0
     internal var model:JokeModel = JokeModel()
     internal var jokeModel:JokeModel
@@ -26,6 +28,8 @@ class JokeTextCell: UITableViewCell {
             self.updateCell()
         }
     }
+    
+    
     
     func updateCell () -> Void {
         contentLabel.text = model.title
@@ -44,11 +48,19 @@ class JokeTextCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(imageTap))
+        imgV .addGestureRecognizer(tap)
+        imgV.userInteractionEnabled = true
+    }
+    func imageTap() -> Void {
+        if imgClick != nil {
+            imgClick!(jokeModel: self.jokeModel)
+        }
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(selected: Bool, animated: Bool)
+    {
         super.setSelected(selected, animated: animated)
-        
     }
     
     
@@ -63,13 +75,13 @@ class JokeTextCell: UITableViewCell {
         dic[NSParagraphStyleAttributeName] = style
         let text = NSString(CString: self.contentLabel!.text!.cStringUsingEncoding(NSUTF8StringEncoding)!,
                             encoding: NSUTF8StringEncoding)
-        let rect = text?.boundingRectWithSize(CGSizeMake(Globle.screenWidth - 30, 1000), options: .UsesLineFragmentOrigin, attributes: dic, context: nil)
+        let rect = text?.boundingRectWithSize(CGSizeMake(Globle.screenWidth - 25, 1000), options: .UsesLineFragmentOrigin, attributes: dic, context: nil)
         
         if rect != nil {
-            height = rect!.height + imgHeight  + 48
+            height = rect!.height + imgHeight  + 29
         }else
         {
-            height = 48
+            height = 28
         }
         
         return height

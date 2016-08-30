@@ -42,31 +42,18 @@ class JokeTableView: UITableView{
         super.init(frame: frame, style: style)
         self.dataSource = tableDelegate
         self.delegate = tableDelegate
+        self.showsHorizontalScrollIndicator = false
+        self.showsVerticalScrollIndicator = false
     }
     
     func loadData() -> Void
     {
-        var dic = Dictionary<String,AnyObject>()
-        dic["m"] = "Api386"
-        dic["c"] = "index"
-        dic["pad"] = "0"
-        dic["sw"] = "1"
-        dic["cid"] = cid
-        dic["p"] = pageIndex
-        dic["markId"] = "0"
-        dic["date"] = "0"
-        if lastTimeMark != 0 {
-            dic["p"] = lastTimeMark
-        }
-        if pageIndex == 1 {
-            self.modelArray .removeAll()
-        }
-        
-        weak var wself :JokeTableView? = self
-        HttpTool.POST("http://xiaoliao.vipappsina.com/index.php", params: dic, succuss:{
-            (obj) in
-            
-            
+        weak var wself = self
+        JKDataLoad .getData(cid, page: page, finishBlock: { (obj) in
+            //当时第一页是 清空原有数据
+            if wself?.page == 1 {
+                wself?.modelArray .removeAll()
+            }
             let dic = obj as! Dictionary<String,AnyObject>
             if dic["rows"] != nil
             {
@@ -79,11 +66,10 @@ class JokeTableView: UITableView{
                 wself!.tableDelegate.dataArray = wself?.modelArray
                 wself!.reloadData()
             }
-        }) { (error) in
-            
+            }) {
+                //获取数据失败的处理代码
         }
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

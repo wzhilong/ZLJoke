@@ -1,5 +1,7 @@
 platform:ios,‘8.0’
-use_frameworks!pod 'SnapKit'
-use_frameworks!pod 'Alamofire'
-use_frameworks!pod 'Kingfisher'
+use_frameworks!
+pod 'SnapKit'
+pod 'Alamofire'
+pod 'Kingfisher'
 pod 'iRate'
+pod 'PKRevealController'

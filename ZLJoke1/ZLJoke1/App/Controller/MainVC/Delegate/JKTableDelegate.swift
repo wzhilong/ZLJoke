@@ -11,6 +11,7 @@ import UIKit
 class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
 {
     internal var dataArray:[AnyObject]?
+    internal var cellImgClick:((jokeModel:JokeModel)->Void)?
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -22,26 +23,34 @@ class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
         if dataArray != nil {
             return dataArray!.count
         }
-        return 10
+        return 0
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cel = tableView.dequeueReusableCellWithIdentifier("JokeTextCell")
         let cell = cel as!JokeTextCell
+        cell.selectionStyle = .None
         if dataArray != nil && dataArray!.count > indexPath.row {
             cell.jokeModel = dataArray![indexPath.row] as! JokeModel
         }
-        
-        
+        cell.imgClick = imgClickF(_:)
         return cell
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         let cel = tableView.dequeueReusableCellWithIdentifier("JokeTextCell")
+        
         let cell = cel as!JokeTextCell
         if dataArray != nil && dataArray!.count > indexPath.row {
             cell.jokeModel = dataArray![indexPath.row] as! JokeModel
         }
+        
         return cell .cellHeight()
+    }
+    func imgClickF (jokeModel:JokeModel) -> Void
+    {
+        if cellImgClick != nil {
+            cellImgClick!(jokeModel: jokeModel)
+        }
     }
 
 }

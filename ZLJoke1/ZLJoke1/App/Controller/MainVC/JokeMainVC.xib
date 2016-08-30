@@ -24,14 +24,19 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Epn-BA-Wp6" customClass="JKScrollTitle" customModule="ZLJoke1" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="20" width="274" height="49"/>
+                    <rect key="frame" x="0.0" y="20" width="280" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="49" id="i0X-T3-fyQ"/>
+                        <constraint firstAttribute="height" constant="44" id="i0X-T3-fyQ"/>
                     </constraints>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-jO-B64">
-                    <rect key="frame" x="274" y="20" width="46" height="49"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-jO-B64">
+                    <rect key="frame" x="280" y="20" width="40" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="eap-cv-slV"/>
+                    </constraints>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="f3G-q0-Rlt"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>
@@ -41,6 +46,7 @@
                 <constraint firstAttribute="trailing" secondItem="ecP-ld-Dv5" secondAttribute="trailing" id="hTG-rd-0u5"/>
                 <constraint firstItem="ecP-ld-Dv5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m3C-dv-P1a"/>
                 <constraint firstAttribute="trailing" secondItem="a8b-jO-B64" secondAttribute="trailing" id="o2m-Sv-AVI"/>
+                <constraint firstItem="a8b-jO-B64" firstAttribute="height" secondItem="Epn-BA-Wp6" secondAttribute="height" id="ofM-f9-mbq"/>
                 <constraint firstItem="ecP-ld-Dv5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pVp-bb-ok5"/>
                 <constraint firstItem="Epn-BA-Wp6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sMX-2K-cHX"/>
             </constraints>

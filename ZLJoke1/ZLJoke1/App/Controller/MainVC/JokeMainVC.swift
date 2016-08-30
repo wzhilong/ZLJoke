@@ -12,20 +12,28 @@ import Alamofire
 class JokeMainVC: UIViewController ,UIScrollViewDelegate
 {
     @IBOutlet weak var topScrollV: JKScrollTitle!
-    internal var contentScrollV: JKContentScroll = JKContentScroll.init(frame: CGRectMake(0, 64, Globle.screenWidth, Globle.screenHeight - 64 - 49))
+    internal var contentScrollV: JKContentScroll = JKContentScroll.init(frame: CGRectMake(0, 64, Globle.screenWidth, Globle.screenHeight - 64 ))
     
     
     internal var tableViewArray:[UITableView]!
-    
-    
+
     internal var tuiJianTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     internal var imgTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     internal var textTV = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     internal var vedioTV = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     
+    @IBAction func buttonClick(sender: AnyObject)
+    {
+        let delegate = UIApplication .sharedApplication().delegate as! AppDelegate
+        delegate .startPresentVC()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        vedioTV.tableDelegate.cellImgClick = cellImgClick(_:)
+        
         self.view .addSubview(contentScrollV)
         contentScrollV.addJokeTableSubleView(tuiJianTV)
         contentScrollV.addJokeTableSubleView(imgTV)
@@ -42,11 +50,11 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
     func endDece(index:Int)->Void{
         topScrollV.titleClickAtIndex(index)
     }
-    
-    override func viewWillAppear(animated: Bool)
-    {
-        
+    func cellImgClick(jokeModel:JokeModel) -> Void {
+        NSLog("cellImgClick")
     }
+    
+    
     func loadData () -> Void
     {
         tuiJianTV.page = 1;
