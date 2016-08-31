@@ -8,14 +8,14 @@
 
 import UIKit
 import Kingfisher
+import AVFoundation
 class JokeTextCell: UITableViewCell {
 
     @IBOutlet weak var imgWidthConst: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var imgV: UIImageView!
     
-    
-    internal var imgClick:((jokeModel:JokeModel)->Void)?
+    internal var imgClick:((jokeCell:JokeTextCell)->Void)?
     internal var imgHeight:CGFloat = 0
     internal var model:JokeModel = JokeModel()
     internal var jokeModel:JokeModel
@@ -54,7 +54,7 @@ class JokeTextCell: UITableViewCell {
     }
     func imageTap() -> Void {
         if imgClick != nil {
-            imgClick!(jokeModel: self.jokeModel)
+            imgClick!(jokeCell: self)
         }
     }
 

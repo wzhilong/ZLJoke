@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4D4E011D767E1F0044E5D5 /* JokeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */; };
+		0C4D4E021D767E1F0044E5D5 /* JokeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */; };
+		0C4D4E041D768D460044E5D5 /* JokeVedioTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D4E031D768D460044E5D5 /* JokeVedioTool.swift */; };
 		0C548DF01D70369C006C3B49 /* JKScrollTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DEF1D70369C006C3B49 /* JKScrollTitle.swift */; };
 		0C548DF21D704133006C3B49 /* JokeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DF11D704133006C3B49 /* JokeTableView.swift */; };
 		0C548DF41D7041EE006C3B49 /* JKTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */; };
@@ -27,6 +30,7 @@
 		0C9F9C6F1D6EDE5F00956C61 /* JokeMyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C6D1D6EDE5F00956C61 /* JokeMyVC.xib */; };
 		0CB175A31D7533D600BF1D97 /* JKDataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB175A21D7533D600BF1D97 /* JKDataLoad.swift */; };
 		0CB175A51D7537A800BF1D97 /* WebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB175A41D7537A800BF1D97 /* WebModel.swift */; };
+		0CB175E31D7562F200BF1D97 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB175E21D7562F200BF1D97 /* AVFoundation.framework */; };
 		0CD6B7291D73DB1900ED18ED /* JKContentScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */; };
 		0CD6B72C1D73F90700ED18ED /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B72B1D73F90700ED18ED /* JokeModel.swift */; };
 		0CD6B72E1D74057E00ED18ED /* HttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6B72D1D74057E00ED18ED /* HttpTool.swift */; };
@@ -51,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeDetailVC.swift; sourceTree = "<group>"; };
+		0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeDetailVC.xib; sourceTree = "<group>"; };
+		0C4D4E031D768D460044E5D5 /* JokeVedioTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeVedioTool.swift; sourceTree = "<group>"; };
 		0C548DEF1D70369C006C3B49 /* JKScrollTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKScrollTitle.swift; sourceTree = "<group>"; };
 		0C548DF11D704133006C3B49 /* JokeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeTableView.swift; path = ../JokeTableView.swift; sourceTree = "<group>"; };
 		0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKTableDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 		0C9F9C6D1D6EDE5F00956C61 /* JokeMyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeMyVC.xib; sourceTree = "<group>"; };
 		0CB175A21D7533D600BF1D97 /* JKDataLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKDataLoad.swift; sourceTree = "<group>"; };
 		0CB175A41D7537A800BF1D97 /* WebModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebModel.swift; sourceTree = "<group>"; };
+		0CB175E21D7562F200BF1D97 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKContentScroll.swift; sourceTree = "<group>"; };
 		0CD6B72B1D73F90700ED18ED /* JokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		0CD6B72D1D74057E00ED18ED /* HttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpTool.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB175E31D7562F200BF1D97 /* AVFoundation.framework in Frameworks */,
 				885DA86C0F78A7383779A4E9 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +233,8 @@
 				0C9F9C701D6EEC0C00956C61 /* Delegate */,
 				0C9F9C671D6ED45700956C61 /* JokeMainVC.swift */,
 				0C9F9C681D6ED45700956C61 /* JokeMainVC.xib */,
+				0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */,
+				0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -248,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */,
+				0C4D4E031D768D460044E5D5 /* JokeVedioTool.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -265,6 +277,7 @@
 		B227320316F907C4E45E67B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CB175E21D7562F200BF1D97 /* AVFoundation.framework */,
 				31DA00F21F93B391B0206A96 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -392,6 +405,7 @@
 				0C9F9C341D6EC56F00956C61 /* Assets.xcassets in Resources */,
 				0C9F9C6F1D6EDE5F00956C61 /* JokeMyVC.xib in Resources */,
 				0C9F9C6A1D6ED45700956C61 /* JokeMainVC.xib in Resources */,
+				0C4D4E021D767E1F0044E5D5 /* JokeDetailVC.xib in Resources */,
 				0C9F9C321D6EC56F00956C61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C548DF41D7041EE006C3B49 /* JKTableDelegate.swift in Sources */,
+				0C4D4E011D767E1F0044E5D5 /* JokeDetailVC.swift in Sources */,
 				0C9F9C6E1D6EDE5F00956C61 /* JokeMyVC.swift in Sources */,
 				0CB175A51D7537A800BF1D97 /* WebModel.swift in Sources */,
 				0C548DF01D70369C006C3B49 /* JKScrollTitle.swift in Sources */,
@@ -476,6 +491,7 @@
 				0C548DF21D704133006C3B49 /* JokeTableView.swift in Sources */,
 				0C9F9C631D6EC5A800956C61 /* Globle.swift in Sources */,
 				0C548DFB1D704471006C3B49 /* JokeTextCell.swift in Sources */,
+				0C4D4E041D768D460044E5D5 /* JokeVedioTool.swift in Sources */,
 				0C9F9C611D6EC5A800956C61 /* IndexVC.swift in Sources */,
 				0C9F9C691D6ED45700956C61 /* JokeMainVC.swift in Sources */,
 				0C9F9C2D1D6EC56F00956C61 /* AppDelegate.swift in Sources */,

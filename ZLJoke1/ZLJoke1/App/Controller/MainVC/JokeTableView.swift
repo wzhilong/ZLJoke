@@ -44,6 +44,8 @@ class JokeTableView: UITableView{
         self.delegate = tableDelegate
         self.showsHorizontalScrollIndicator = false
         self.showsVerticalScrollIndicator = false
+        
+        
     }
     
     func loadData() -> Void

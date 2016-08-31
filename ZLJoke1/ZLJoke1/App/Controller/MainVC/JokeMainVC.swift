@@ -9,13 +9,17 @@
 import UIKit
 import SnapKit
 import Alamofire
+import AVFoundation
 class JokeMainVC: UIViewController ,UIScrollViewDelegate
 {
     @IBOutlet weak var topScrollV: JKScrollTitle!
+    
     internal var contentScrollV: JKContentScroll = JKContentScroll.init(frame: CGRectMake(0, 64, Globle.screenWidth, Globle.screenHeight - 64 ))
     
+    internal var player:AVPlayer?
+    internal var playerPlayer:AVPlayerLayer?
+    internal var playVedioCell:JokeTextCell?
     
-    internal var tableViewArray:[UITableView]!
 
     internal var tuiJianTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     internal var imgTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
@@ -28,13 +32,13 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         delegate .startPresentVC()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        vedioTV.tableDelegate.cellImgClick = cellImgClick(_:)
-        
-        self.view .addSubview(contentScrollV)
+        self.configTableView()
         contentScrollV.addJokeTableSubleView(tuiJianTV)
         contentScrollV.addJokeTableSubleView(imgTV)
         contentScrollV.addJokeTableSubleView(textTV)
@@ -47,11 +51,46 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         }
         self .loadData()
     }
+    
+    func configTableView() -> Void {
+        vedioTV.tableDelegate.cellImgClick = cellImgClick(_:)
+        tuiJianTV.tableDelegate.cellClick = tableCellClick(_:)
+        imgTV.tableDelegate.cellClick = tableCellClick(_:)
+        textTV.tableDelegate.cellClick = tableCellClick(_:)
+        vedioTV.tableDelegate.cellClick = tableCellClick(_:)
+        self.view .addSubview(contentScrollV)
+    }
+    func tableCellClick(cell:JokeTextCell)->Void
+    {
+        let detailVC = JokeDetailVC()
+        self.navigationController!.pushViewController(detailVC, animated: true)
+    }
     func endDece(index:Int)->Void{
         topScrollV.titleClickAtIndex(index)
     }
-    func cellImgClick(jokeModel:JokeModel) -> Void {
+    func cellImgClick(jokeCell:JokeTextCell) -> Void {
         NSLog("cellImgClick")
+        if jokeCell.jokeModel.mp4_url != nil
+        {
+            if playVedioCell == jokeCell {
+                player?.seekToTime(<#T##time: CMTime##CMTime#>)
+            }
+            playVedioCell = jokeCell
+            let url = NSURL.init(string: jokeCell.jokeModel.mp4_url!)
+            if playerPlayer?.superlayer != nil {
+                player?.pause()
+                playerPlayer!.removeFromSuperlayer()
+                player = nil
+            }
+            player = AVPlayer.init(URL: url!)
+            
+            playerPlayer = AVPlayerLayer.init(player: player)
+            playerPlayer?.backgroundColor = UIColor.clearColor().CGColor
+            playerPlayer?.frame = jokeCell.imgV.bounds
+            jokeCell.imgV.layer .addSublayer(playerPlayer!)
+            
+            player?.play()
+        }
     }
     
     
@@ -65,14 +104,11 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         vedioTV.cid = "video"
         vedioTV.page = 1
     }
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
     }
+    
 
 }
