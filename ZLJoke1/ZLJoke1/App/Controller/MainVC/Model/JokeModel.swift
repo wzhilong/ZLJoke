@@ -16,6 +16,7 @@ class JokeModel: NSObject {
     internal var pic_w:Float = 0
     internal var pic_h:Float = 0
     
+    internal var mp4_palyed:Int = 1
     internal var mp4_url:String?
     internal var web_url:String?
     

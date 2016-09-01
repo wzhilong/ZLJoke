@@ -10,6 +10,7 @@
 		0C4D4E011D767E1F0044E5D5 /* JokeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */; };
 		0C4D4E021D767E1F0044E5D5 /* JokeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */; };
 		0C4D4E041D768D460044E5D5 /* JokeVedioTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D4E031D768D460044E5D5 /* JokeVedioTool.swift */; };
+		0C4D4E0A1D76C0970044E5D5 /* JokeVedioTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D4E091D76C0970044E5D5 /* JokeVedioTableView.swift */; };
 		0C548DF01D70369C006C3B49 /* JKScrollTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DEF1D70369C006C3B49 /* JKScrollTitle.swift */; };
 		0C548DF21D704133006C3B49 /* JokeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DF11D704133006C3B49 /* JokeTableView.swift */; };
 		0C548DF41D7041EE006C3B49 /* JKTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */; };
@@ -58,6 +59,7 @@
 		0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeDetailVC.swift; sourceTree = "<group>"; };
 		0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeDetailVC.xib; sourceTree = "<group>"; };
 		0C4D4E031D768D460044E5D5 /* JokeVedioTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeVedioTool.swift; sourceTree = "<group>"; };
+		0C4D4E091D76C0970044E5D5 /* JokeVedioTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeVedioTableView.swift; sourceTree = "<group>"; };
 		0C548DEF1D70369C006C3B49 /* JKScrollTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKScrollTitle.swift; sourceTree = "<group>"; };
 		0C548DF11D704133006C3B49 /* JokeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JokeTableView.swift; path = ../JokeTableView.swift; sourceTree = "<group>"; };
 		0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKTableDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				0C548DF91D704471006C3B49 /* JokeTextCell.swift */,
 				0C548DFA1D704471006C3B49 /* JokeTextCell.xib */,
 				0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */,
+				0C4D4E091D76C0970044E5D5 /* JokeVedioTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				0CD6B7291D73DB1900ED18ED /* JKContentScroll.swift in Sources */,
 				0C548DF21D704133006C3B49 /* JokeTableView.swift in Sources */,
 				0C9F9C631D6EC5A800956C61 /* Globle.swift in Sources */,
+				0C4D4E0A1D76C0970044E5D5 /* JokeVedioTableView.swift in Sources */,
 				0C548DFB1D704471006C3B49 /* JokeTextCell.swift in Sources */,
 				0C4D4E041D768D460044E5D5 /* JokeVedioTool.swift in Sources */,
 				0C9F9C611D6EC5A800956C61 /* IndexVC.swift in Sources */,

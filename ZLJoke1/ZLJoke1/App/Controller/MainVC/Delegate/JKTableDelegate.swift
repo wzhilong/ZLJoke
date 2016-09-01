@@ -13,11 +13,13 @@ class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
     internal var dataArray:[AnyObject]?
     internal var cellImgClick:((jokeCell:JokeTextCell)->Void)?
     internal var cellClick:((jokeCell:JokeTextCell)->Void)?
+    internal var scrollBlock:(()->Void)?
+    internal var endDecelerate:(()->Void)?
+    internal var endDragging:(()->Void)?
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         tableView .registerNib(UINib.init(nibName: "JokeTextCell", bundle: nil), forCellReuseIdentifier: "JokeTextCell")
-        
         return 1
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +46,6 @@ class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
         if dataArray != nil && dataArray!.count > indexPath.row {
             cell.jokeModel = dataArray![indexPath.row] as! JokeModel
         }
-        
         return cell .cellHeight()
     }
     func imgClickF (jokeCell:JokeTextCell) -> Void
@@ -61,5 +62,21 @@ class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
         }
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        if (scrollBlock != nil) {
+            scrollBlock!()
+        }
+    }
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        if endDecelerate != nil {
+            endDecelerate!()
+        }
+    }
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if endDragging != nil {
+            endDragging!()
+        }
+    }
 
 }

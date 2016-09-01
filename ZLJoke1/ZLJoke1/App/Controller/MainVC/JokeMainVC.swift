@@ -24,7 +24,7 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
     internal var tuiJianTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     internal var imgTV:JokeTableView = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     internal var textTV = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
-    internal var vedioTV = JokeTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
+    internal var vedioTV = JokeVedioTableView.init(frame: CGRectMake(0, 0, 0, 0), style:.Plain)
     
     @IBAction func buttonClick(sender: AnyObject)
     {
@@ -44,10 +44,19 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         contentScrollV.addJokeTableSubleView(textTV)
         contentScrollV.addJokeTableSubleView(vedioTV)
         contentScrollV.endDecelerating = endDece
+        
+        
         weak var wself = self
         topScrollV.addTitleArray(["推荐","趣图","物语","视频"]) { (num, title) in
             NSLog("num:%d , title:%s", num,title)
             wself?.contentScrollV .scrollToIndex(num)
+            if num != 3
+            {
+                wself?.vedioTV.canclePlayer()
+            }else
+            {
+                wself?.vedioTV.playerVedio()
+            }
         }
         self .loadData()
     }
@@ -68,31 +77,13 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
     func endDece(index:Int)->Void{
         topScrollV.titleClickAtIndex(index)
     }
-    func cellImgClick(jokeCell:JokeTextCell) -> Void {
+    func cellImgClick(jokeCell:JokeTextCell) -> Void
+    {
         NSLog("cellImgClick")
-        if jokeCell.jokeModel.mp4_url != nil
-        {
-            if playVedioCell == jokeCell {
-                player?.seekToTime(<#T##time: CMTime##CMTime#>)
-            }
-            playVedioCell = jokeCell
-            let url = NSURL.init(string: jokeCell.jokeModel.mp4_url!)
-            if playerPlayer?.superlayer != nil {
-                player?.pause()
-                playerPlayer!.removeFromSuperlayer()
-                player = nil
-            }
-            player = AVPlayer.init(URL: url!)
+        if jokeCell.jokeModel.mp4_url != nil{
             
-            playerPlayer = AVPlayerLayer.init(player: player)
-            playerPlayer?.backgroundColor = UIColor.clearColor().CGColor
-            playerPlayer?.frame = jokeCell.imgV.bounds
-            jokeCell.imgV.layer .addSublayer(playerPlayer!)
-            
-            player?.play()
         }
     }
-    
     
     func loadData () -> Void
     {
@@ -104,7 +95,6 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         vedioTV.cid = "video"
         vedioTV.page = 1
     }
-
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

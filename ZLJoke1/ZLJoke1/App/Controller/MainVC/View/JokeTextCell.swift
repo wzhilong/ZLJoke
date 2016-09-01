@@ -11,6 +11,8 @@ import Kingfisher
 import AVFoundation
 class JokeTextCell: UITableViewCell {
 
+    
+    
     @IBOutlet weak var imgWidthConst: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var imgV: UIImageView!
