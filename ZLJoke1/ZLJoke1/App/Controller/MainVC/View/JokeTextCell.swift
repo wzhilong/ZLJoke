@@ -31,8 +31,6 @@ class JokeTextCell: UITableViewCell {
         }
     }
     
-    
-    
     func updateCell () -> Void {
         contentLabel.text = model.title
         if model.pic != nil {
@@ -85,9 +83,7 @@ class JokeTextCell: UITableViewCell {
         {
             height = 28
         }
-        
         return height
-        
     }
     
 }

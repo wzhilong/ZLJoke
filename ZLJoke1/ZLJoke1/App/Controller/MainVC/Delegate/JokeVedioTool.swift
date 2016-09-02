@@ -54,10 +54,18 @@ class JokeVedioTool :NSObject
     
     func playerVedio(urlStr:String ,onView:UIView)
     {
-        let url = NSURL.init(string: urlStr)
         self.onView = onView
+        
+        let url = NSURL.init(string: urlStr)
         item = AVPlayerItem.init(URL: url!)
+        player = AVPlayer.init(playerItem: item!)
         self.addAVPlayerObserver()
+        
+        layer = AVPlayerLayer.init(player: player)
+        layer?.frame = onView.frame
+        
+        
+        
     }
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         let playerItem = object as!AVPlayerItem

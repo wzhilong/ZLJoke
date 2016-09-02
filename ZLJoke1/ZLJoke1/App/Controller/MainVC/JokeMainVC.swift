@@ -45,7 +45,6 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         contentScrollV.addJokeTableSubleView(vedioTV)
         contentScrollV.endDecelerating = endDece
         
-        
         weak var wself = self
         topScrollV.addTitleArray(["推荐","趣图","物语","视频"]) { (num, title) in
             NSLog("num:%d , title:%s", num,title)

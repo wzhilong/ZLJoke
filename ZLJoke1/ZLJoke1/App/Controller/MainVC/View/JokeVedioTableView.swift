@@ -78,7 +78,6 @@ class JokeVedioTableView: JokeTableView
             if (CGFloat)(rect.origin.y)  > (CGFloat)(jokeCell.imgV.frame.size.height * -1/2) {
                 arr.append(jokeCell)
             }
-            
         }
         return arr
     }
