@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.4.2)
   - iRate (1.11.6)
   - Kingfisher (2.5.0)
+  - MJRefresh (3.1.12)
   - PKRevealController (2.0.6)
   - SnapKit (0.22.0)
 
@@ -9,6 +10,7 @@ DEPENDENCIES:
   - Alamofire
   - iRate
   - Kingfisher
+  - MJRefresh
   - PKRevealController
   - SnapKit
 
@@ -16,6 +18,7 @@ SPEC CHECKSUMS:
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
   iRate: 61e558919c4a7fde63b3c22ebbd6c114a1eee658
   Kingfisher: d467bd710907ec9aa94aaddecaa5390aa3559819
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   PKRevealController: ffb45a16f5a5032ad90a3d16e5cbb0d8e035bd58
   SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
 

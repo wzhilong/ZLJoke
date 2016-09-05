@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01BF8D5E101AA1FB35E00394"
+               BlueprintIdentifier = "5D9CB11D36C0C01196618B48"
                BuildableName = "iRate.framework"
                BlueprintName = "iRate"
                ReferencedContainer = "container:Pods.xcodeproj">

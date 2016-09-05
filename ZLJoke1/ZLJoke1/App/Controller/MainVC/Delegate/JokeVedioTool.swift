@@ -85,7 +85,6 @@ class JokeVedioTool :NSObject
         //缓冲进度
         if keyPath == "loadedTimeRanges" {
         }
-        
     }
     
     

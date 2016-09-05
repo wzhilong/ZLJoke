@@ -46,7 +46,6 @@ class JokeVedioTableView: JokeTableView
         {
             let jokeCell = cell
             if jokeCell.model.mp4_url != nil {
-                
                 self.canclePlayer()
                 avPlayer = AVPlayer.init(URL: NSURL.init(string: jokeCell.model.mp4_url!)!)
                 avPlayerLayer = AVPlayerLayer.init(player: avPlayer)
