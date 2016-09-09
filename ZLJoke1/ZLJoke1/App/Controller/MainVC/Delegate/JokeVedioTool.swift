@@ -64,8 +64,6 @@ class JokeVedioTool :NSObject
         layer = AVPlayerLayer.init(player: player)
         layer?.frame = onView.frame
         
-        
-        
     }
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         let playerItem = object as!AVPlayerItem

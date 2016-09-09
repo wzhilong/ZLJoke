@@ -15,13 +15,8 @@ class HttpTool: NSObject {
         Alamofire.request(.POST, url, parameters: params, encoding: .URLEncodedInURL, headers: nil).responseJSON { (response) in
             switch response.result{
             case .Success:
-                if let dic = response.result.value as? NSDictionary
-                {
-                    NSLog("%@", dic)
-                    if succuss != nil{
-                        succuss!(obj: dic)
-                    }
-                }
+                succuss!(obj:response.result.value!)
+
                 break
                 
             case .Failure(let error):

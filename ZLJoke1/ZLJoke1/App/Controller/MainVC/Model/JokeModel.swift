@@ -10,6 +10,7 @@ import UIKit
 
 class JokeModel: NSObject {
     internal var _id:String?
+        /// 内容
     internal var title:String?
     
     internal var pic:String?

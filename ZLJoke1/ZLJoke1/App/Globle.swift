@@ -9,6 +9,11 @@
 import UIKit
 
 
+let cellBgColor = UIColor.whiteColor()
+let cellLineBgColor = UIColor.grayColor()
+let vcBgColor = UIColor.whiteColor()
+
+
 class Globle: NSObject {
     static let screenWidth  = UIScreen.mainScreen().bounds.width
     static let screenHeight = UIScreen.mainScreen().bounds.height

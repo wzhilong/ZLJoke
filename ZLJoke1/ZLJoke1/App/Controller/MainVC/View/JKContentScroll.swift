@@ -65,7 +65,8 @@ class JKContentScroll: UIScrollView ,UIScrollViewDelegate
             endDecelerating!(x)
         }
     }
-    func scrollToIndex(index:Int) -> Void {
+    func scrollToIndex(index:Int) -> Void
+    {
         self .scrollRectToVisible(CGRectMake(width * (CGFloat)(index), 0, width, height), animated: true)
     }
     

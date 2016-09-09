@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JokeMainVC" customModule="ZLJoke1" customModuleProvider="target">
             <connections>
+                <outlet property="topB" destination="hgP-cA-loI" id="cnU-59-fUM"/>
                 <outlet property="topScrollV" destination="Epn-BA-Wp6" id="gKD-Cc-5Tp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,12 +39,25 @@
                         <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="f3G-q0-Rlt"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgP-cA-loI">
+                    <rect key="frame" x="282" y="488" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="BsH-kW-8lw"/>
+                        <constraint firstAttribute="height" constant="30" id="NSS-vF-mvY"/>
+                    </constraints>
+                    <state key="normal" title="top"/>
+                    <connections>
+                        <action selector="topBClick:" destination="-1" eventType="touchUpInside" id="Y0W-fR-HGD"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="Epn-BA-Wp6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="2U2-Vx-4MH"/>
                 <constraint firstItem="a8b-jO-B64" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="6PH-Wy-Ypy"/>
                 <constraint firstItem="a8b-jO-B64" firstAttribute="leading" secondItem="Epn-BA-Wp6" secondAttribute="trailing" id="8nW-wD-hLh"/>
+                <constraint firstAttribute="bottom" secondItem="hgP-cA-loI" secondAttribute="bottom" constant="50" id="Zhu-xr-vW8"/>
                 <constraint firstAttribute="trailing" secondItem="ecP-ld-Dv5" secondAttribute="trailing" id="hTG-rd-0u5"/>
+                <constraint firstAttribute="trailing" secondItem="hgP-cA-loI" secondAttribute="trailing" constant="8" id="jSb-47-1bJ"/>
                 <constraint firstItem="ecP-ld-Dv5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m3C-dv-P1a"/>
                 <constraint firstAttribute="trailing" secondItem="a8b-jO-B64" secondAttribute="trailing" id="o2m-Sv-AVI"/>
                 <constraint firstItem="a8b-jO-B64" firstAttribute="height" secondItem="Epn-BA-Wp6" secondAttribute="height" id="ofM-f9-mbq"/>

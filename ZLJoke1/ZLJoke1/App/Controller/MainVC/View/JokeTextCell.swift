@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import AVFoundation
+import SDWebImage
 class JokeTextCell: UITableViewCell {
 
     
@@ -34,7 +35,12 @@ class JokeTextCell: UITableViewCell {
     func updateCell () -> Void {
         contentLabel.text = model.title
         if model.pic != nil {
-            imgV.kf_setImageWithURL(NSURL.init(string: model.pic!))
+            weak var imageV = imgV;
+            imgV.sd_setHighlightedImageWithURL(NSURL.init(string: model.pic!), options:SDWebImageOptions.ContinueInBackground, progress: { (x, y) in
+                print("%d %d",x,y)
+                }, completed: { (img , error, type, url) in
+                    imageV?.image = img
+            })
         }
         imgHeight = (CGFloat)(model.pic_h)
         imgWidthConst.constant = (CGFloat)(model.pic_w)

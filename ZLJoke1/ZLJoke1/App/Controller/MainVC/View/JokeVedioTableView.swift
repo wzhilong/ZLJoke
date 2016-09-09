@@ -27,46 +27,16 @@ class JokeVedioTableView: JokeTableView
     }
     func vedioCellScroll()->Void
     {
-        self .canclePlayer()
     }
     func vedioCellEndDece()->Void
     {
-        playerVedio()
         NSLog("scrollViewDidEndDecelerate")
     }
     func vedioCellEndDragging()->Void
     {
-        playerVedio()
         NSLog("scrollViewDidEndDragging")
     }
     
-    func playerVedio () -> Void {
-        let cellArray = self.setVisibleImgVCell()
-        for cell in cellArray
-        {
-            let jokeCell = cell
-            if jokeCell.model.mp4_url != nil {
-                self.canclePlayer()
-                avPlayer = AVPlayer.init(URL: NSURL.init(string: jokeCell.model.mp4_url!)!)
-                avPlayerLayer = AVPlayerLayer.init(player: avPlayer)
-                avPlayerLayer?.frame = jokeCell.imgV.bounds
-                avPlayerLayer?.backgroundColor = UIColor.whiteColor().CGColor
-                jokeCell.imgV.layer .addSublayer(avPlayerLayer!)
-                avPlayer?.play()
-                vedioPlayerCell = jokeCell
-                break;
-            }
-        }
-    }
-    func  canclePlayer() -> Void
-    {
-        if nil != avPlayer  {
-            avPlayer?.pause()
-            avPlayerLayer?.removeFromSuperlayer()
-            avPlayer = nil
-            avPlayerLayer = nil
-        }
-    }
     func  setVisibleImgVCell() -> [JokeTextCell] {
         let cellArray = self.visibleCells
         var arr = Array<JokeTextCell>()

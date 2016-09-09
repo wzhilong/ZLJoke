@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C04F9751D811AC20008AE0A /* JKImgShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C04F9731D811AC20008AE0A /* JKImgShowVC.swift */; };
+		0C04F9761D811AC20008AE0A /* JKImgShowVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C04F9741D811AC20008AE0A /* JKImgShowVC.xib */; };
 		0C4D4E011D767E1F0044E5D5 /* JokeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */; };
 		0C4D4E021D767E1F0044E5D5 /* JokeDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */; };
 		0C4D4E041D768D460044E5D5 /* JokeVedioTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4D4E031D768D460044E5D5 /* JokeVedioTool.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C04F9731D811AC20008AE0A /* JKImgShowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKImgShowVC.swift; sourceTree = "<group>"; };
+		0C04F9741D811AC20008AE0A /* JKImgShowVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKImgShowVC.xib; sourceTree = "<group>"; };
 		0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeDetailVC.swift; sourceTree = "<group>"; };
 		0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeDetailVC.xib; sourceTree = "<group>"; };
 		0C4D4E031D768D460044E5D5 /* JokeVedioTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeVedioTool.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				0C9F9C681D6ED45700956C61 /* JokeMainVC.xib */,
 				0C4D4DFF1D767E1F0044E5D5 /* JokeDetailVC.swift */,
 				0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */,
+				0C04F9731D811AC20008AE0A /* JKImgShowVC.swift */,
+				0C04F9741D811AC20008AE0A /* JKImgShowVC.xib */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 			files = (
 				0C9F9C371D6EC56F00956C61 /* LaunchScreen.storyboard in Resources */,
 				0C548DFC1D704471006C3B49 /* JokeTextCell.xib in Resources */,
+				0C04F9761D811AC20008AE0A /* JKImgShowVC.xib in Resources */,
 				0C9F9C621D6EC5A800956C61 /* IndexVC.xib in Resources */,
 				0C9F9C341D6EC56F00956C61 /* Assets.xcassets in Resources */,
 				0C9F9C6F1D6EDE5F00956C61 /* JokeMyVC.xib in Resources */,
@@ -488,6 +495,7 @@
 				0CB175A51D7537A800BF1D97 /* WebModel.swift in Sources */,
 				0C548DF01D70369C006C3B49 /* JKScrollTitle.swift in Sources */,
 				0CD6B72E1D74057E00ED18ED /* HttpTool.swift in Sources */,
+				0C04F9751D811AC20008AE0A /* JKImgShowVC.swift in Sources */,
 				0CD6B72C1D73F90700ED18ED /* JokeModel.swift in Sources */,
 				0CB175A31D7533D600BF1D97 /* JKDataLoad.swift in Sources */,
 				0CD6B7291D73DB1900ED18ED /* JKContentScroll.swift in Sources */,

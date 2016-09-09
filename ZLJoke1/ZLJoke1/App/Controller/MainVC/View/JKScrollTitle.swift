@@ -26,7 +26,7 @@ class JKScrollTitle: UIScrollView {
     
     
     let height :CGFloat = 49
-    let width :CGFloat = 60
+    let width :CGFloat = 80
     
     
     override func awakeFromNib() {
@@ -62,7 +62,7 @@ class JKScrollTitle: UIScrollView {
             but .addTarget(self, action: #selector(titleButtonClick(_:)), forControlEvents: .TouchUpInside)
             but.tag = index + tagIndex
             but.setTitle(title, forState:.Normal)
-            but.titleLabel?.font = UIFont.systemFontOfSize(15)
+            but.titleLabel?.font = UIFont.systemFontOfSize(18)
             self .addSubview(but)
             
             index = index + 1
@@ -112,7 +112,7 @@ class JKScrollTitle: UIScrollView {
             {
                 self.preSelectButton!.titleLabel?.font = UIFont.systemFontOfSize(15)
             }
-            sender.titleLabel?.font = UIFont.systemFontOfSize(18)
+            sender.titleLabel?.font = UIFont.systemFontOfSize(20)
             self.preSelectButton = sender
         }
         
