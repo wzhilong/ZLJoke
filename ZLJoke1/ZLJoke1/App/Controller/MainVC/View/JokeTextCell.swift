@@ -14,6 +14,8 @@ class JokeTextCell: UITableViewCell {
 
     
     
+    @IBOutlet weak var shareB: UIButton!
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var imgWidthConst: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var imgV: UIImageView!
@@ -32,11 +34,12 @@ class JokeTextCell: UITableViewCell {
         }
     }
     
-    func updateCell () -> Void {
+    func updateCell () -> Void
+    {
         contentLabel.text = model.title
         if model.pic != nil {
             weak var imageV = imgV;
-            imgV.sd_setHighlightedImageWithURL(NSURL.init(string: model.pic!), options:SDWebImageOptions.ContinueInBackground, progress: { (x, y) in
+            imgV.sd_setHighlightedImageWithURL(NSURL.init(string: model.pic!), options:SDWebImageOptions.ProgressiveDownload, progress: { (x, y) in
                 print("%d %d",x,y)
                 }, completed: { (img , error, type, url) in
                     imageV?.image = img
@@ -57,6 +60,8 @@ class JokeTextCell: UITableViewCell {
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(imageTap))
         imgV .addGestureRecognizer(tap)
         imgV.userInteractionEnabled = true
+        
+        buttonView.backgroundColor = UIColor.init(red: 0.88, green: 0.88, blue: 0.88, alpha: 0.7)
     }
     func imageTap() -> Void {
         if imgClick != nil {
@@ -92,4 +97,9 @@ class JokeTextCell: UITableViewCell {
         return height
     }
     
+    @IBAction func shareClick(sender: AnyObject)
+    {
+        
+    }
+
 }

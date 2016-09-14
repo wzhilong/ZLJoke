@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PKRevealing{
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        //配置友盟数据
+        ZLUMeng.UMLaunchApp()
+        
+        
         let vc = IndexVC()
         vc.title = "启动"
         let nav = UINavigationController.init(rootViewController: vc)
@@ -68,6 +72,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate , PKRevealing{
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        let result = UMSocialSnsService.handleOpenURL(url)
+        if !result {
+            
+        }
+        return result
     }
 
 

@@ -48,6 +48,9 @@ class JKTableDelegate: NSObject ,UITableViewDelegate,UITableViewDataSource
         }
         return cell .cellHeight()
     }
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 10
+    }
     func imgClickF (jokeCell:JokeTextCell) -> Void
     {
         if cellImgClick != nil {

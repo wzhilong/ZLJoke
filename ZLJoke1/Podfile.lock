@@ -8,6 +8,8 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SnapKit (0.22.0)
+  - UMengAnalytics (4.1.0)
+  - UMengSocial (5.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -17,6 +19,8 @@ DEPENDENCIES:
   - PKRevealController
   - SDWebImage
   - SnapKit
+  - UMengAnalytics
+  - UMengSocial (~> 5)
 
 SPEC CHECKSUMS:
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
@@ -26,5 +30,7 @@ SPEC CHECKSUMS:
   PKRevealController: ffb45a16f5a5032ad90a3d16e5cbb0d8e035bd58
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
+  UMengAnalytics: 19b28253793d77dff10fb7d502faad1fb6b8ce4a
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
 
 COCOAPODS: 0.38.2

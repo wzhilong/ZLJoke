@@ -42,29 +42,28 @@ class JKImgShowVC: UIViewController ,UIScrollViewDelegate{
         {
             if let model = obj as? JokeModel
             {
-                if  selectedModel == model  {
-                    scrollView.contentOffset = CGPointMake(Globle.screenWidth * x, 0)
-                }
-                
                 let imgV = UIImageView.init(frame: CGRectMake(Globle.screenWidth * x, 0, Globle.screenWidth, Globle.screenHeight))
                 
                 imgV .sd_setImageWithURL(NSURL.init(string: model.pic!))
                 imgV.contentMode = .ScaleToFill
                 scrollView .addSubview(imgV)
-                x = x + 1
-                scrollView.contentSize = CGSizeMake(Globle.screenWidth * x , Globle.screenHeight)
+                
+                scrollView.contentSize = CGSizeMake(Globle.screenWidth * (x+1) , Globle.screenHeight)
                 
                 let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapBack))
                 imgV .addGestureRecognizer(tap)
                 imgV.userInteractionEnabled = true
                 
-                
+                if  selectedModel == model  {
+                    scrollView.contentOffset = CGPointMake(Globle.screenWidth * x, 0)
+                }
+                //累加x
+                x = x + 1
             }
         }
     }
     func tapBack() -> Void {
         self .dismissViewControllerAnimated(true) {
-            
         }
     }
     
@@ -86,22 +85,11 @@ class JKImgShowVC: UIViewController ,UIScrollViewDelegate{
                 infoL.text = jokeModel.title
             }
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -38,8 +38,11 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
+        
     }
-    
+    override func viewWillDisappear(animated: Bool) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         currentTV = tuiJianTV
@@ -74,7 +77,7 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
     {
         vedioTV.cid = "video"
         vedioTV.tableDelegate.cellImgClick = vedioClick(_:)
-        vedioTV.tableDelegate.cellClick = tableCellClick(_:)
+        vedioTV.tableDelegate.cellClick = vedioClick(_:)
         
         tuiJianTV.cid = "joke"
         tuiJianTV.tableDelegate.cellClick = tableCellClick(_:)
@@ -86,7 +89,7 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         
         textTV.cid = "mm"
         textTV.tableDelegate.cellClick = tableCellClick(_:)
-        imgTV.tableDelegate.cellImgClick = cellImgClick(_:)
+        textTV.tableDelegate.cellImgClick = cellImgClick(_:)
         
         contentScrollV.addJokeTableSubleView(tuiJianTV)
         contentScrollV.addJokeTableSubleView(imgTV)
@@ -102,6 +105,7 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
     func tableCellClick(cell:JokeTextCell)->Void
     {
         let detailVC = JokeDetailVC()
+        detailVC.jokeModel = cell.jokeModel
         self.navigationController!.pushViewController(detailVC, animated: true)
     }
     /**
@@ -112,17 +116,18 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
         let imgVC = JKImgShowVC()
         imgVC.dataArray = getCurrentJokeTable().tableDelegate.dataArray!
         imgVC.selectedModel = jokeCell.model
-        self.presentViewController(imgVC, animated: true) { 
-            
+        self.presentViewController(imgVC, animated: true)
+        {
         }
-        
     }
     /**
      视频播放点击处理
      */
     func  vedioClick(jokeCell:JokeTextCell) -> Void
     {
-        
+        let vc = JKVideoVC()
+        vc.jokeModel = jokeCell.jokeModel
+        self.navigationController?.pushViewController(vc , animated: true)
     }
     /**
      scroll结束翻页的处理
@@ -147,7 +152,6 @@ class JokeMainVC: UIViewController ,UIScrollViewDelegate
                 currentTV = vedioTV as JokeTableView
             break;
         default: break
-            
         }
         return currentTV!
     }

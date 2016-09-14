@@ -18,6 +18,11 @@
 		0C548DF41D7041EE006C3B49 /* JKTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */; };
 		0C548DFB1D704471006C3B49 /* JokeTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C548DF91D704471006C3B49 /* JokeTextCell.swift */; };
 		0C548DFC1D704471006C3B49 /* JokeTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C548DFA1D704471006C3B49 /* JokeTextCell.xib */; };
+		0C66458E1D827F8200B27158 /* JKDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66458C1D827F8200B27158 /* JKDetailCell.swift */; };
+		0C66458F1D827F8200B27158 /* JKDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C66458D1D827F8200B27158 /* JKDetailCell.xib */; };
+		0C6645961D82872400B27158 /* JKVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6645941D82872400B27158 /* JKVideoVC.swift */; };
+		0C6645971D82872400B27158 /* JKVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6645951D82872400B27158 /* JKVideoVC.xib */; };
+		0C66459A1D82A53400B27158 /* ZLUMengConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6645991D82A53400B27158 /* ZLUMengConfig.swift */; };
 		0C9F9C2D1D6EC56F00956C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F9C2C1D6EC56F00956C61 /* AppDelegate.swift */; };
 		0C9F9C321D6EC56F00956C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C301D6EC56F00956C61 /* Main.storyboard */; };
 		0C9F9C341D6EC56F00956C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9F9C331D6EC56F00956C61 /* Assets.xcassets */; };
@@ -69,6 +74,11 @@
 		0C548DF31D7041EE006C3B49 /* JKTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKTableDelegate.swift; sourceTree = "<group>"; };
 		0C548DF91D704471006C3B49 /* JokeTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeTextCell.swift; sourceTree = "<group>"; };
 		0C548DFA1D704471006C3B49 /* JokeTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeTextCell.xib; sourceTree = "<group>"; };
+		0C66458C1D827F8200B27158 /* JKDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKDetailCell.swift; sourceTree = "<group>"; };
+		0C66458D1D827F8200B27158 /* JKDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKDetailCell.xib; sourceTree = "<group>"; };
+		0C6645941D82872400B27158 /* JKVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKVideoVC.swift; sourceTree = "<group>"; };
+		0C6645951D82872400B27158 /* JKVideoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JKVideoVC.xib; sourceTree = "<group>"; };
+		0C6645991D82A53400B27158 /* ZLUMengConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLUMengConfig.swift; sourceTree = "<group>"; };
 		0C9F9C291D6EC56F00956C61 /* ZLJoke1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLJoke1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9F9C2C1D6EC56F00956C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9F9C311D6EC56F00956C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,8 +146,18 @@
 				0C548DFA1D704471006C3B49 /* JokeTextCell.xib */,
 				0CD6B7281D73DB1900ED18ED /* JKContentScroll.swift */,
 				0C4D4E091D76C0970044E5D5 /* JokeVedioTableView.swift */,
+				0C66458C1D827F8200B27158 /* JKDetailCell.swift */,
+				0C66458D1D827F8200B27158 /* JKDetailCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0C6645981D82A51C00B27158 /* ZLUmeng */ = {
+			isa = PBXGroup;
+			children = (
+				0C6645991D82A53400B27158 /* ZLUMengConfig.swift */,
+			);
+			path = ZLUmeng;
 			sourceTree = "<group>";
 		};
 		0C9F9C201D6EC56F00956C61 = {
@@ -197,6 +217,7 @@
 		0C9F9C5A1D6EC5A800956C61 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0C6645981D82A51C00B27158 /* ZLUmeng */,
 				0C9F9C5B1D6EC5A800956C61 /* Controller */,
 				0C9F9C5E1D6EC5A800956C61 /* Globle.swift */,
 				0CD6B72D1D74057E00ED18ED /* HttpTool.swift */,
@@ -244,6 +265,8 @@
 				0C4D4E001D767E1F0044E5D5 /* JokeDetailVC.xib */,
 				0C04F9731D811AC20008AE0A /* JKImgShowVC.swift */,
 				0C04F9741D811AC20008AE0A /* JKImgShowVC.xib */,
+				0C6645941D82872400B27158 /* JKVideoVC.swift */,
+				0C6645951D82872400B27158 /* JKVideoVC.xib */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -409,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9F9C371D6EC56F00956C61 /* LaunchScreen.storyboard in Resources */,
+				0C66458F1D827F8200B27158 /* JKDetailCell.xib in Resources */,
 				0C548DFC1D704471006C3B49 /* JokeTextCell.xib in Resources */,
 				0C04F9761D811AC20008AE0A /* JKImgShowVC.xib in Resources */,
 				0C9F9C621D6EC5A800956C61 /* IndexVC.xib in Resources */,
@@ -417,6 +441,7 @@
 				0C9F9C6A1D6ED45700956C61 /* JokeMainVC.xib in Resources */,
 				0C4D4E021D767E1F0044E5D5 /* JokeDetailVC.xib in Resources */,
 				0C9F9C321D6EC56F00956C61 /* Main.storyboard in Resources */,
+				0C6645971D82872400B27158 /* JKVideoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,9 +529,12 @@
 				0C4D4E0A1D76C0970044E5D5 /* JokeVedioTableView.swift in Sources */,
 				0C548DFB1D704471006C3B49 /* JokeTextCell.swift in Sources */,
 				0C4D4E041D768D460044E5D5 /* JokeVedioTool.swift in Sources */,
+				0C6645961D82872400B27158 /* JKVideoVC.swift in Sources */,
 				0C9F9C611D6EC5A800956C61 /* IndexVC.swift in Sources */,
 				0C9F9C691D6ED45700956C61 /* JokeMainVC.swift in Sources */,
+				0C66458E1D827F8200B27158 /* JKDetailCell.swift in Sources */,
 				0C9F9C2D1D6EC56F00956C61 /* AppDelegate.swift in Sources */,
+				0C66459A1D82A53400B27158 /* ZLUMengConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,11 +681,14 @@
 			baseConfigurationReference = A9A04F4037418FEDC946A611 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ZLJoke1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.10fenke.ZLJoke1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
@@ -667,6 +698,8 @@
 			baseConfigurationReference = 93F8AE7832074896A21AF6E1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ZLJoke1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

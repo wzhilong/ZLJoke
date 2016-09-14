@@ -19,7 +19,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecP-ld-Dv5">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                    <color key="backgroundColor" red="0.95406827059659094" green="0.24872085128152421" blue="0.22962999883209176" alpha="0.80851614238410596" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.95406827059659094" green="0.75821307334902732" blue="0.2373030242534877" alpha="0.80851614238410596" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="Ll2-2n-V0N"/>
                     </constraints>
