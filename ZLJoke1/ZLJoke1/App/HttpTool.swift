@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 class HttpTool: NSObject {
 
-    static func POST(url:String,params:(Dictionary<String,AnyObject>)?,succuss:((obj:AnyObject)->Void)? ,failue:(()->Void)?) -> Void
+    static func POST(url:String,params:(Dictionary<String,AnyObject>)?,succuss:((_ obj:AnyObject)->Void)? ,failue:(()->Void)?) -> Void
     {
         Alamofire.request(.POST, url, parameters: params, encoding: .URLEncodedInURL, headers: nil).responseJSON { (response) in
             switch response.result{
